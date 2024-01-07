@@ -2,15 +2,14 @@ import { create } from 'zustand';
 import { persist } from 'zustand/middleware';
 
 interface BearState {
-  bears: number;
-  increase: (by: number) => void;
+  openaiKey?: string;
+  setOpenaiKey: (key: string) => void;
 }
 
 export const useBearStore = create<BearState>()(
   persist(
     (set) => ({
-      bears: 0,
-      increase: (by) => set((state) => ({ bears: state.bears + by })),
+      setOpenaiKey: (key: string) => set({ openaiKey: key }),
     }),
     {
       name: 'bear-storage',
