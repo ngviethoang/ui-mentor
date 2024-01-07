@@ -101,7 +101,7 @@ export default function Settings({ data, onChange }: SettingsProps) {
   };
 
   return (
-    <Dialog open={open} onOpenChange={(val) => setOpen(val)}>
+    <Dialog open={open} onOpenChange={(val: boolean) => setOpen(val)}>
       <DialogTrigger asChild>
         <Button size="sm" onClick={() => setOpen(true)}>
           Editor Settings
@@ -245,8 +245,8 @@ export default function Settings({ data, onChange }: SettingsProps) {
                 <div className="space-y-1 flex flex-col gap-2">
                   <Label htmlFor="cssExternalLinks">Add External Scripts</Label>
                   <p className="text-sm text-muted-foreground">
-                    Any URL's added here will be added as {'<script>'}s in
-                    order, and run before the JavaScript in the editor.
+                    Any URLs added here will be added as {'<script>'}s in order,
+                    and run before the JavaScript in the editor.
                   </p>
                   {js.externalLinks.map((link, i) => (
                     <div className="flex gap-2" key={link + i}>
