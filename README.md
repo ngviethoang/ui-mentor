@@ -8,6 +8,11 @@
 
 - 🤖 Powered by OpenAI's GPT-4V: You'll need to bring your own OpenAI API key with GPT-4V access. 🗝️🔮
 
+## Demo video
+
+https://github.com/ngviethoang/ui-mentor/assets/25498258/9d4473f7-2e5f-46d8-bdbb-6aa7619e5fd1
+
+
 ## Technology
 
 - NextJS
