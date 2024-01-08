@@ -13,6 +13,7 @@ import Settings, { SettingsDataProps } from './code-editor-settings';
 import { TutorialStepProps } from '@/app/page';
 import Markdown from 'react-markdown';
 import { ScrollArea } from '../ui/scroll-area';
+import { CodeEditorSourceCodeDialog } from './code-editor-source-code';
 
 interface CodeEditorProps {
   tutorialSteps: TutorialStepProps[];
@@ -203,7 +204,12 @@ export default function CodeEditor({
         <ResizableHandle withHandle />
 
         <ResizablePanel>
-          <div>Preview</div>
+          <div className="flex justify-between items-center">
+            <div>Preview</div>
+            <div>
+              <CodeEditorSourceCodeDialog srcDoc={srcDoc} />
+            </div>
+          </div>
           <div className="bg-white w-full h-full">
             <iframe title="result" srcDoc={srcDoc} className="w-full h-full" />
           </div>
